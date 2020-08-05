@@ -1,4 +1,4 @@
-# next-store
+# next-educational
 
 A proof of concept using a NextJS seed ready to be deployed with Vercel.
 
@@ -6,51 +6,43 @@ A proof of concept using a NextJS seed ready to be deployed with Vercel.
 
 ### Features
 
-- Lazy Image Loading x2
-- CSS Purged
-- Green on Lighthouse
+- [x] Images Lazy-Loading
+- [x] CSS Purged
+- [x] Perfect Scoring on Lighthouse
+- [ ] Localization
+- [ ] Incremental Static Generation
+- [ ] SEO Ready
+- [ ] Hybrid Pages
 
-![Image of Lighthouse](https://res.cloudinary.com/vercel/image/upload/v1592422143/lighthouse_agjpn1.png)
+## Tech Stack
 
-### Tech Stack
-
-- Nextjs
-- PurgeCSS
-- TailwindCSS
+- Next.js
+- Tailwind CSS
 - PostCSS
+  - PurgeCSS
   - Allows nesting and imports.
+
+## Why Next.js
+
+A More Technical Why
+
+- **Hybrid Framework** - Dynamic and Static Sites
+- **Maximum flexibility** - Architecture that scales
+- **Incremental Static Generation** - Build as you go
+- **Stable and Up-to-Date** - Regularly updated
+- **Popular and Open-Source** - Trusted by the community
+- **Low learning curve** - Zero Config
+- **No Lock-In** - Just Components
+- **For everyone** - Small sized teams, multiple squads
 
 ## Up and Running
 
 - Develop running `npm run dev` - [http://localhost:3000](http://localhost:3000)
-
 - Build `npm run build`
-
 - Deploy `vercel --prod`
 
-## Demo
+## Reading and Resources
 
-[https://next-store-pi.vercel.app](https://next-store-pi.vercel.app)
-
-## Data Fetching
-
-Using SWR:
-
-```js
-import useSWR from "swr";
-
-function Profile() {
-  const { data, error } = useSWR("/api/user", fetcher);
-
-  if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
-  return <div>hello {data.name}!</div>;
-}
-```
-
-## Examples and Resources
-
-- NextJS with Prismic [https://github.com/vercel/next.js/tree/canary/examples/cms-prismic](https://github.com/vercel/next.js/tree/canary/examples/cms-prismic)
 - Data fetching with [SWR](https://swr.now.sh/)
 - [Nextjs Documentation](https://nextjs.org/docs/getting-started)
 - Incremental Static Generation [https://static-tweet.now.sh/](https://static-tweet.now.sh/)

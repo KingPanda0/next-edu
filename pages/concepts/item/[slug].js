@@ -2,7 +2,7 @@ import Layout from "../../../components/core/Layout";
 
 export default function IncrementalPage({ slug, updatedAt }) {
   return (
-    <Layout showGoBack>
+    <Layout showGoBack styled>
       <p>This page has been Incrementally built.</p>
       <div>Slug: {slug}</div>
       <div>Updated At: {new Date(updatedAt).toLocaleTimeString()}</div>

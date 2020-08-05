@@ -11,7 +11,7 @@ export default function Isg() {
   };
 
   return (
-    <Layout showGoBack>
+    <Layout showGoBack styled>
       <h1>Incremental Static Generation - Fallback Mode</h1>
       <p>
         Big and complex systems with many web pages encounter the issue of
