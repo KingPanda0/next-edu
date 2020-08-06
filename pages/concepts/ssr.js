@@ -1,9 +1,14 @@
+import Link from "next/link";
 import Layout from "../../components/core/Layout";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
+  await setTimeout(() => {
+    // blocker function
+  }, 1000);
+
   return {
     props: {
-      data: "statically computed at build-time. ",
+      data: "server side rendered.",
     },
   };
 }
@@ -11,12 +16,14 @@ export async function getStaticProps() {
 export default function Example({ data }) {
   return (
     <Layout showGoBack styled>
-      <div>
+      <h1>Server Side Rendering</h1>
+      <br />
+      <blockquote>
         This content is: <strong>{data}</strong>
-      </div>
+      </blockquote>
       <div>
         <hr />
-        <h3>Pre-rendering</h3>
+        <h2>Pre-rendering</h2>
         <p>
           By default, <strong>Next.js pre-renders every page</strong>. This
           means that Next.js generates HTML for each page in advance, instead of
@@ -48,26 +55,36 @@ export default function Example({ data }) {
             </li>
             <li>
               <a
-                href="https://nextjs.org/docs/basic-features/pages#static-genaeration-recommended"
+                href="https://nextjs.org/docs/basic-features/pages#server-side-rendering"
                 target="_blank"
               >
-                Static Generation - Next.js Docs
+                Server-side Rendering - Next.js Docs
               </a>
             </li>
           </ul>
         </p>
-        <h3>Why static?</h3>
+        <br />
+        <h2>What happens when I use Server-side Rendering</h2>
         <p>
-          We recommend using Static Generation over Server-side Rendering for
-          performance reasons. Statically generated pages can be cached by CDN
-          with no extra configuration to boost performance. However, in some
-          cases, Server-side Rendering might be the only option.
+          Next.js pre-renders a page on each request. It will be slower because
+          the page cannot be cached by a CDN, but the pre-rendered page will
+          always be up-to-date.
         </p>
         <p>
-          You can also use <strong>Client-side Rendering</strong> along with
-          <strong> Static Generation</strong>.
+          The HTML is generated on each request. Therefore, by adding latency to
+          the request{" "}
+          <strong>
+            Server-side Rendering results in slower performance than Static
+            Generation.
+          </strong>
         </p>
+        <br />
       </div>
+      <footer className="flex flex-row-reverse my-5 pt-4 min-w-full border-t-2">
+        <Link href="/concepts/isr" as="/concepts/isr">
+          Next up &rarr; Incremental Static Regeneration
+        </Link>
+      </footer>
     </Layout>
   );
 }

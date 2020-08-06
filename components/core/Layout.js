@@ -8,10 +8,10 @@ export default function Layout({ children, showGoBack, styled }) {
       <Head>
         <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
       </Head>
-      <div className={`container mx-auto p-12  max-w-5xl`}>
-        <header className={s.header}>
-          <h1 className="text-2xl font-semibold">next-educational</h1>
-          <p className="py-4">
+      <header className={s.header}>
+        <div>
+          <h1>next-educational</h1>
+          <p>
             A proof of concept using a <strong>NextJS</strong> seed ready to be
             deployed with <strong>Vercel</strong>.
           </p>
@@ -20,9 +20,9 @@ export default function Layout({ children, showGoBack, styled }) {
               <a>Go back</a>
             </Link>
           )}
-        </header>
-        <main className={styled ? s.styled : ""}>{children}</main>
-      </div>
+        </div>
+      </header>
+      <main className={s.container}>{children}</main>
     </>
   );
 }
