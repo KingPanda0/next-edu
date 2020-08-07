@@ -1,4 +1,4 @@
-# next-educational
+# next-edu
 
 A proof of concept using a NextJS seed ready to be deployed with Vercel.
 
@@ -9,9 +9,9 @@ A proof of concept using a NextJS seed ready to be deployed with Vercel.
 - [x] Images Lazy-Loading
 - [x] CSS Purged
 - [x] Perfect Scoring on Lighthouse
+- [x] SEO Ready
+- [x] Incremental Static Generation
 - [ ] Localization
-- [ ] Incremental Static Generation
-- [ ] SEO Ready
 - [ ] Hybrid Pages
 
 ## Tech Stack

@@ -10,7 +10,7 @@ export default function Layout({ children, showGoBack, styled }) {
       </Head>
       <header className={s.header}>
         <div>
-          <h1>next-educational</h1>
+          <h1>next-edu</h1>
           <p>
             A proof of concept using a <strong>NextJS</strong> seed ready to be
             deployed with <strong>Vercel</strong>.

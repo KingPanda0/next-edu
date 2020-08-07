@@ -1,0 +1,28 @@
+.header {
+  background-color: #0e365a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+
+  > div {
+    @apply max-w-6xl mx-auto flex justify-center items-center p-5;
+  }
+
+  h1 {
+    @apply text-xl text-white font-semibold m-0 p-0;
+    font-family: "Georgia";
+    border: none;
+  }
+
+  a {
+    color: grey;
+  }
+
+  a:hover {
+    color: grey;
+  }
+}
+
+.container {
+  @apply max-w-6xl px-6 pb-6 mx-auto;
+  font-family: "Georgia";
+}

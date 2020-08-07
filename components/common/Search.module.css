@@ -1,0 +1,14 @@
+.root {
+  background-image: linear-gradient(to bottom, #071c2e, #0e365a);
+  color: #fff;
+  @apply p-6;
+}
+
+.headline {
+  font-family: "Georgia";
+  @apply text-center text-3xl leading-8 font-extrabold tracking-tight text-white border-none;
+}
+
+.container {
+  @apply max-w-6xl mx-auto p-5;
+}
