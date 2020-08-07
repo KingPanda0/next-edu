@@ -4,24 +4,38 @@ import s from "./MainNav.module.css";
 const MainNav = () => (
   <div className={s.root}>
     <div className="flex flex-col">
-      Concepts:
-      <div className={s.row}>
-        <div className={s.col}>
-          <Link href="/concepts/ssg">
-            <a className={s.btn}>Static Generation (SSG)</a>
-          </Link>
+      <section id="concepts">
+        Concepts:
+        <div className={s.row}>
+          <div className={s.col}>
+            <Link href="/concepts/ssg">
+              <a className={s.btn}>Static Generation (SSG)</a>
+            </Link>
+          </div>
+          <div className={s.col}>
+            <Link href="/concepts/ssr">
+              <a className={s.btn}>Server Rendered (SSR)</a>
+            </Link>
+          </div>
+          <div className={s.col}>
+            <Link href="/concepts/isr">
+              <a className={s.btn}>Incremental Static Regeneration</a>
+            </Link>
+          </div>
         </div>
-        <div className={s.col}>
-          <Link href="/concepts/ssr">
-            <a className={s.btn}>Server Rendered (SSR)</a>
-          </Link>
+      </section>
+      Examples:
+      <section id="examples">
+        <div className={s.row}>
+          <div className={s.col}>
+            <Link href="/examples/terms">
+              <a className={s.btn}>Encyclopedia</a>
+            </Link>
+          </div>
+          <div className={s.col} />
+          <div className={s.col} />
         </div>
-        <div className={s.col}>
-          <Link href="/concepts/isr">
-            <a className={s.btn}>Incremental Static Regeneration</a>
-          </Link>
-        </div>
-      </div>
+      </section>
     </div>
     <footer className="mt-12">
       Built by <strong>Vercel ▲</strong> with{" "}
