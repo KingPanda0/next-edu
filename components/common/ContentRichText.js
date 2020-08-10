@@ -6,8 +6,8 @@ export default function ContentRichText({ document }) {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: (node) =>
         `
-          <div class="inline-block relative bg-white overflow-hidden shadow mb-6 sm:rounded-lg">
-            <img class="x" src="${node.data.target.fields.file.url}"/>
+          <div className="inline-block relative bg-white overflow-hidden shadow mb-6 sm:rounded-lg">
+            <img className="x" src="${node.data.target.fields.file.url}"/>
           </div>
         `,
     },
