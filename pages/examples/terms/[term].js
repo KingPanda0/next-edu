@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Term({ term }) {
   const router = useRouter();
-
+  console.log(term);
   if (!router.isFallback && !term) {
     return <ErrorPage statusCode={404} />;
   }

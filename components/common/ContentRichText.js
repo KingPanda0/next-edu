@@ -6,14 +6,19 @@ export default function ContentRichText({ document }) {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: (node) =>
         `
-          <div className="inline-block relative bg-white overflow-hidden shadow mb-6 sm:rounded-lg">
-            <img className="x" src="${node.data.target.fields.file.url}"/>
-          </div>
+          <figure class="inline-block relative bg-white overflow-hidden">
+            <img class=" shadow mb-6 sm:rounded-lg" src="${node.data.target.fields.file.url}"/>
+            <figcaption>
+              <span class="block text-blue-600 font-semibold">${node.data.target.fields.title}</span>
+              <span class="block text-grey-200">${node.data.target.fields.description}</span>
+            </figcaption>
+          </figure>
         `,
     },
   };
   return (
     <div
+      className="prose pb-6"
       dangerouslySetInnerHTML={{
         __html: documentToHtmlString(document, options),
       }}
