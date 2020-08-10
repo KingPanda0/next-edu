@@ -6,44 +6,32 @@ import CommonLayout from "@/components/common/CommonLayout.js";
 import SEO from "@/core/SEO.js";
 
 export default function Term({ terms }) {
-  const router = useRouter();
-
-  if (!router.isFallback && !terms) {
-    return <ErrorPage statusCode={404} />;
-  }
-
   return (
     <CommonLayout>
       <SEO
         pageTitle="The Encyclopledia"
         url="https://next-edu.vercel.app/examples/terms/"
       />
-      {router.isFallback ? (
-        <div>Loading...</div>
-      ) : (
-        <div>
-          <section>
-            <h3>Trending Terms: </h3>
-            <ul>
-              {terms.map((t) => (
-                <li>
-                  <Link
-                    href={`/examples/terms/${t.word}`}
-                    as={`/examples/terms/${t.word}`}
-                  >
-                    <a>{t.word}</a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        </div>
-      )}
+      <section>
+        <h3>Trending Terms:</h3>
+        <ul>
+          {terms.map((t) => (
+            <li key={t}>
+              <Link
+                href={`/examples/terms/${t.word}`}
+                as={`/examples/terms/${t.word}`}
+              >
+                <a>{t.word}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </CommonLayout>
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
   const data = await getAllTerms();
   return {
     props: {
