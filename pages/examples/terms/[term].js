@@ -15,12 +15,6 @@ export default function Term({ term }) {
 
   return (
     <CommonLayout>
-      <SEO
-        title={term.word}
-        pageTitle={"The Encyclopledia"}
-        description={term.description}
-        url={`https://next-edu.vercel.app/examples/terms/${term.word}`}
-      />
       {router.isFallback ? (
         <>
           <div className="animate-pulse flex space-x-4">
@@ -46,6 +40,12 @@ export default function Term({ term }) {
         </>
       ) : (
         <>
+          <SEO
+            title={term.word}
+            pageTitle={"The Encyclopledia"}
+            description={term.description}
+            url={`https://next-edu.vercel.app/examples/terms/${term.word}`}
+          />
           <h1>{term.word}</h1>
           <ContentRichText document={term.meaning} />
           <hr />
