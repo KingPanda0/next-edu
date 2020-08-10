@@ -67,6 +67,9 @@ export async function getStaticProps({ params }) {
     props: {
       term: data?.term ?? null,
     },
+    // we will attempt to re-generate the page:
+    // - when a request comes in
+    // - at most once every 5 seconds
     revalidate: 5,
   };
 }
