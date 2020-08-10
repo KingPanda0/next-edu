@@ -73,7 +73,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const allTerms = await getAllTermsWithSlug();
-  console.log("ddd", allTerms);
+
   return {
     paths: allTerms?.map(({ word }) => `/examples/terms/${word}`) ?? [],
     fallback: true,
