@@ -13,7 +13,9 @@ export default function Term({ terms }) {
         url="https://next-edu.vercel.app/examples/terms/"
       />
       <section>
-        <h3>Trending Terms:</h3>
+        <h3>
+          Trending Terms: <small>See All Quizzes</small>
+        </h3>
         <ul>
           {terms.map((t) => (
             <li key={t}>
@@ -27,6 +29,24 @@ export default function Term({ terms }) {
           ))}
         </ul>
       </section>
+      <section>
+        <h3>
+          Trending Quizzes: <small>See All Quizzes</small>
+        </h3>
+        <ul>
+          {terms.map((t) => (
+            <li key={t}>
+              <Link
+                href={`/examples/terms/${t.word}`}
+                as={`/examples/terms/${t.word}`}
+              >
+                <a>{t.word}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <div className="cta"></div>
     </CommonLayout>
   );
 }

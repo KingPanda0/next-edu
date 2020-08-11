@@ -3,8 +3,24 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   color: #fff;
 
+  nav {
+    @apply m-0;
+  }
+
   > div {
-    @apply max-w-6xl mx-auto flex justify-center items-center p-5;
+    @apply max-w-6xl mx-auto flex justify-between items-center py-3 px-6;
+
+    nav a {
+      @apply text-white align-middle mr-6;
+
+      &:hover {
+        @apply border-solid border-b-2 cursor-pointer;
+      }
+
+      &:last-child {
+        @apply mr-0;
+      }
+    }
   }
 
   h1 {
@@ -12,13 +28,21 @@
     font-family: "Georgia";
     border: none;
   }
+}
 
-  a {
-    color: grey;
+.footer {
+  background-color: #0e365a;
+  @apply p-6 text-white;
+
+  a,
+  span {
+    @apply text-white;
   }
 
-  a:hover {
-    color: grey;
+  form {
+    button {
+      height: 50px;
+    }
   }
 }
 

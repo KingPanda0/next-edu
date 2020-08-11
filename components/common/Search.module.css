@@ -1,7 +1,7 @@
 .root {
   background-image: linear-gradient(to bottom, #071c2e, #0e365a);
   color: #fff;
-  @apply p-6;
+  @apply pt-8 pb-1;
 }
 
 .headline {
@@ -10,5 +10,5 @@
 }
 
 .container {
-  @apply max-w-6xl mx-auto p-5;
+  @apply max-w-6xl mx-auto;
 }

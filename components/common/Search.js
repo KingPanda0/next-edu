@@ -16,12 +16,12 @@ export default function Search() {
             aria-label="Search Encyclopedia"
             type="email"
             required
-            className="appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out max-w-xl"
+            className="appearance-none w-full px-4 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out max-w-xl"
             placeholder="Search Term"
           />
         </form>
-        <nav className="flex flex-col md:flex-wrap md:flex-row border-blue-dark items-center justify-center">
-          <div className="px-3 py-2 text-base text-sm text-center font-semibold tracking-wide uppercase">
+        <nav className="flex flex-col md:flex-wrap md:flex-row border-blue-dark items-center justify-between border-t p-2 border-blue-800">
+          <div className="py-2 text-base text-xs font-semibold tracking-wide uppercase">
             Encyclopedia Categories
           </div>
           <a

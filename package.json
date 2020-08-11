@@ -10,7 +10,7 @@
     "@contentful/rich-text-types": "^14.1.1",
     "contentful": "^7.14.6",
     "intersection-observer": "^0.10.0",
-    "next": "^9.5.1",
+    "next": "^9.5.2-canary.18",
     "next-seo": "^4.7.3",
     "postcss-exclude-files": "^1.0.15",
     "postcss-nested": "^4.2.1",
