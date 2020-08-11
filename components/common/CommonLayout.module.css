@@ -36,7 +36,7 @@
   }
 
   h1 {
-    @apply text-xl text-white font-semibold m-0 p-0;
+    @apply text-xl text-white font-semibold m-0 p-0 cursor-pointer;
     font-family: "Georgia";
     border: none;
   }
@@ -74,6 +74,6 @@
 }
 
 .container {
-  @apply max-w-6xl px-6 pb-6 mx-auto;
+  @apply max-w-6xl px-6 pb-6 mx-auto min-h-screen;
   font-family: "Georgia";
 }

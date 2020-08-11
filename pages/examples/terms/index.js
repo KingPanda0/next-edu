@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { getAllTerms } from "@/lib/api";
 import CommonLayout from "@/components/common/CommonLayout.js";
 import SEO from "@/core/SEO.js";
+import Quizzes from "@/components/common/Quizzes.js";
 
 export default function Term({ terms }) {
   return (
@@ -14,37 +15,31 @@ export default function Term({ terms }) {
       />
       <section>
         <h3>
-          Trending Terms: <small>See All Quizzes</small>
+          Trending Terms: <small>See All Terms</small>
         </h3>
-        <ul>
+        <div className="mt-8 mb-24 grid gap-5 max-w-lg mx-auto lg:grid-cols-6 lg:max-w-none">
           {terms.map((t) => (
-            <li key={t}>
+            <div
+              key={t}
+              className="flex flex-col shadow-lg overflow-hidden rounded py-3 p-6 bg-gray-100 text-center"
+            >
               <Link
                 href={`/examples/terms/${t.word}`}
                 as={`/examples/terms/${t.word}`}
               >
-                <a>{t.word}</a>
+                <a className="text-blue-900 leading-5 font-semibold">
+                  {t.word}
+                </a>
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
       <section>
         <h3>
           Trending Quizzes: <small>See All Quizzes</small>
         </h3>
-        <ul>
-          {terms.map((t) => (
-            <li key={t}>
-              <Link
-                href={`/examples/terms/${t.word}`}
-                as={`/examples/terms/${t.word}`}
-              >
-                <a>{t.word}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <Quizzes />
       </section>
       <div className="cta"></div>
     </CommonLayout>
