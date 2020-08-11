@@ -29,11 +29,19 @@ const MainNav = () => (
         <div className={s.row}>
           <div className={s.col}>
             <Link href="/examples/terms">
-              <a className={s.btn}>Encyclopedia</a>
+              <a className={s.btn}>Case: Encyclopedia</a>
             </Link>
           </div>
-          <div className={s.col} />
-          <div className={s.col} />
+          <div className={s.col}>
+            <a className={s.btnDisabled} disabled>
+              Case: Healthcare (WIP)
+            </a>
+          </div>
+          <div className={s.col}>
+            <a className={s.btnDisabled} disabled>
+              Case: Reference (WIP)
+            </a>
+          </div>
         </div>
       </section>
     </div>
