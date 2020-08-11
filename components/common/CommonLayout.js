@@ -30,7 +30,7 @@ export default function CommonLayout({ children }) {
             about this day in history, updates, and special offers.
           </span>
           <form
-            className="mt-8 flex justify-center items-top sm:flex"
+            className="mt-8 flex flex-col justify-center items-top md:flex-wrap md:flex-row"
             aria-labelledby="newsletter-headline"
           >
             <input
@@ -47,7 +47,7 @@ export default function CommonLayout({ children }) {
             information from Encyclopaedia Britannica. Click here to view our
             Privacy Notice. Easy unsubscribe links are provided in every email.
           </span>
-          <nav className="flex flex-row items-center justify-between px-64">
+          <nav className="flex flex-col md:flex-wrap md:flex-row border-blue-dark items-center justify-between p-2 cursor-pointer">
             <a>About Us & Legal Info</a>
             <a>Partner Program</a>
             <a>Contact Us</a>
