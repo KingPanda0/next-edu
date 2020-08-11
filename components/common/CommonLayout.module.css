@@ -2,9 +2,16 @@
   background-color: #0e365a;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   color: #fff;
+  max-height: 62px;
+  overflow: hidden;
 
   nav {
     @apply m-0;
+    display: none;
+
+    @media (min-width: 640px) {
+      display: block;
+    }
   }
 
   > div {
@@ -21,6 +28,11 @@
         @apply mr-0;
       }
     }
+
+    :nth-child(2) {
+      flex-grow: 1;
+      text-align: center;
+    }
   }
 
   h1 {
@@ -31,6 +43,21 @@
 }
 
 .footer {
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    @apply mt-4;
+  }
+
+  li:before,
+  li:after {
+    content: "";
+  }
+
   background-color: #0e365a;
   @apply p-6 text-white;
 
